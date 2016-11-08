@@ -63,3 +63,14 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+#.gitignore
+# ignore cocoaPods 
+Pods/
+
+#Podfile.lock 应该加入到版本控制里面，不应该把这个文件加入到.gitignore中。因为Podfile.lock会锁定当前各依赖库的版本，之后如果多次执行pod install 不会更改版本，要pod update才会改Podfile.lock了。这样多人协作的时候，可以防止第三方库升级时造成大家各自的第三方库版本不一致。
+#Podfile.lock
+
+#xcuserdata
+UserInterfaceState.xcuserstate
+Breakpoints_v2.xcbkptlist
